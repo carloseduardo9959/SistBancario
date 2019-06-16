@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-	class CPoupanca:Conta
+	class CCorrente : Conta
 	{
-		protected List<Conta> lCPoup;
+		protected List<Conta> lCcorrent;
 
-		public List<Conta> LCPoup { get { return LCPoup; } }
+		public List<Conta> LCcorrent { get { return lCcorrent; } }
 
 		public void RegConta(Conta A)
 		{
-			lCPoup.Add(A);
+			lCcorrent.Add(A);
 		}
 
 		public override void Sacar(double valor)
 		{
-			if (valor > 0 && valor <= Saldo) 
+			if (valor > 0 && valor <= Saldo)
 			{
-				Saldo -= valor;
+				Saldo -= valor + 0.10;
 			}
 		}
 	}

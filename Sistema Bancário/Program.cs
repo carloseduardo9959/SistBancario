@@ -13,7 +13,7 @@ namespace Banco
 			try
 			{
 				List<Conta> Lc = new List<Conta>();
-				Conta A=null;
+				Conta A = null;
 				CPoupanca CP = null;
 				CCorrente CC = null;
 				int Op = 0;
@@ -51,16 +51,18 @@ namespace Banco
 							Console.WriteLine("[2] - Conta Corrente");
 							Console.Write("Sua opção: ");
 							Op = int.Parse(Console.ReadLine());
-							
-							if (Op == 1) {
+
+							if (Op == 1)
+							{
 								CP = new CPoupanca();
-								CP.GravarDados(n,nome, cpf, end, id);
+								CP.GravarDados(n, nome, cpf, end, id);
 								Lc.Add(CP);
 							}
-							if (Op == 2) {
+							if (Op == 2)
+							{
 
 								CC = new CCorrente();
-								CC.GravarDados(n,nome, cpf, end, id);
+								CC.GravarDados(n, nome, cpf, end, id);
 								Lc.Add(CC);
 							}
 
@@ -77,10 +79,31 @@ namespace Banco
 								{
 									dados = item.MostrarDados();
 									Console.WriteLine(dados);
-									Console.WriteLine("Saldo disponível.....: "+item.Saldo.ToString("R$ 0.00"));
+									Console.WriteLine("Saldo disponível.....: " + item.Saldo.ToString("R$ 0.00"));
 								}
 							}
+							Console.WriteLine("======================================");
 							Console.ReadKey();
+							break;
+
+						case 3:
+							Console.Clear();
+							Console.WriteLine("========== SAQUE ==========");
+							Console.Write("Número da conta: ");
+							num = int.Parse(Console.ReadLine());
+							Console.Write("Valor: ");
+							double valor = double.Parse(Console.ReadLine());
+							Console.WriteLine();
+							foreach (Conta item in Lc)
+							{
+								if (num == item.Numero)
+								{
+									dados = item.MostrarDados();
+									Console.WriteLine(dados);
+									Console.WriteLine();
+									item.Sacar(valor);
+								}
+							}
 							break;
 
 						case 4:
@@ -89,7 +112,8 @@ namespace Banco
 							Console.Write("Número da conta: ");
 							num = int.Parse(Console.ReadLine());
 							Console.Write("Valor: ");
-							double valor = double.Parse(Console.ReadLine());
+							valor = double.Parse(Console.ReadLine());
+							Console.WriteLine();
 							foreach (Conta item in Lc)
 							{
 								if (num == item.Numero)
@@ -100,6 +124,7 @@ namespace Banco
 								}
 							}
 							Console.WriteLine("Deposito realizado com sucesso!");
+							Console.WriteLine("==============================");
 							Console.ReadKey();
 							break;
 
@@ -111,8 +136,9 @@ namespace Banco
 							{
 								aux = item.MostrarDados();
 								Console.WriteLine(aux);
-								
+
 							}
+							Console.WriteLine("====================================");
 							Console.ReadKey();
 							break;
 					}

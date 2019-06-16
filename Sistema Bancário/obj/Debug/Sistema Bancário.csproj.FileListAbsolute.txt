@@ -1,0 +1,7 @@
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\bin\Debug\Sistema Bancário.exe.config
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\bin\Debug\Sistema Bancário.exe
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\bin\Debug\Sistema Bancário.pdb
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\obj\Debug\Sistema Bancário.csprojAssemblyReference.cache
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\obj\Debug\Sistema Bancário.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\obj\Debug\Sistema Bancário.exe
+C:\Users\Carlos\source\repos\Sistema Bancário\Sistema Bancário\obj\Debug\Sistema Bancário.pdb

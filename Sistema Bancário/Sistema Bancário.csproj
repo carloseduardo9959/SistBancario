@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F500995B-8089-4F14-8C35-8D5125131E83}</ProjectGuid>
+    <ProjectGuid>{E4E87B1E-02CE-48BF-9E57-CFBB0B33A7DF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Banco</RootNamespace>
-    <AssemblyName>Banco</AssemblyName>
+    <RootNamespace>Sistema_Bancário</RootNamespace>
+    <AssemblyName>Sistema Bancário</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,7 @@
     <Compile Include="CCorrente.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conta.cs" />
-    <Compile Include="CPoupanca.cs" />
+    <Compile Include="CPoupança.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

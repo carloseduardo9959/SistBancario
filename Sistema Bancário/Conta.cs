@@ -18,7 +18,7 @@ namespace Banco
 			saldo = 0;
 		}
 
-		public void GravarDados(int num, string nome,string cpf, string endereço, int idade)
+		public void GravarDados(int num, string nome, string cpf, string endereço, int idade)
 		{
 			numero = num;
 			titular.Gravar(nome, cpf, endereço, idade);
@@ -38,7 +38,7 @@ namespace Banco
 		public int Numero { get => numero; set => numero = value; }
 		public double Saldo { get => saldo; set => saldo = value; }
 
-		
+
 		public void Deposita(double valor_deposito)
 		{
 			if (valor_deposito > 0)
@@ -47,14 +47,15 @@ namespace Banco
 
 			}
 		}
-		public virtual void Sacar(double valor) {
-        
-            if (valor < Saldo)
-            {
-                Saldo = Saldo - valor;
-            }
-        }
-		
+		public virtual void Sacar(double valor)
+		{
+
+			if (valor < Saldo)
+			{
+				Saldo = Saldo - valor;
+			}
+		}
+
 	}
-	
+
 }
