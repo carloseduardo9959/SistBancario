@@ -24,5 +24,10 @@ namespace Banco
 				Saldo -= valor;
 			}
 		}
+
+		public override string MostrarSaldo()
+		{
+			return base.MostrarSaldo();
+		}
 	}
 }

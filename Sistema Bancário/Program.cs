@@ -13,7 +13,6 @@ namespace Banco
 			try
 			{
 				List<Conta> Lc = new List<Conta>();
-				Conta A = null;
 				CPoupanca CP = null;
 				CCorrente CC = null;
 				int Op = 0;
@@ -73,13 +72,17 @@ namespace Banco
 							Console.Write("Número da conta: ");
 							int num = int.Parse(Console.ReadLine());
 							string dados = " ";
+							string saldo = " ";
+							Console.WriteLine();
+							Console.WriteLine("=========== DADOS DA CONTA ===========");
 							foreach (Conta item in Lc)
 							{
 								if (num == item.Numero)
 								{
 									dados = item.MostrarDados();
 									Console.WriteLine(dados);
-									Console.WriteLine("Saldo disponível.....: " + item.Saldo.ToString("R$ 0.00"));
+									saldo = item.MostrarSaldo();
+									Console.WriteLine(saldo);
 								}
 							}
 							Console.WriteLine("======================================");
@@ -88,12 +91,13 @@ namespace Banco
 
 						case 3:
 							Console.Clear();
-							Console.WriteLine("========== SAQUE ==========");
+							Console.WriteLine("============== SAQUE ===============");
 							Console.Write("Número da conta: ");
 							num = int.Parse(Console.ReadLine());
 							Console.Write("Valor: ");
 							double valor = double.Parse(Console.ReadLine());
 							Console.WriteLine();
+							Console.WriteLine("========== DADOS DA CONTA ==========");
 							foreach (Conta item in Lc)
 							{
 								if (num == item.Numero)
@@ -104,16 +108,19 @@ namespace Banco
 									item.Sacar(valor);
 								}
 							}
+							Console.WriteLine("Saque realizado com sucesso!");
+							Console.WriteLine("===================================");
 							break;
 
 						case 4:
 							Console.Clear();
-							Console.WriteLine("========== DEPOSITO ==========");
+							Console.WriteLine("============= DEPOSITO =============");
 							Console.Write("Número da conta: ");
 							num = int.Parse(Console.ReadLine());
 							Console.Write("Valor: ");
 							valor = double.Parse(Console.ReadLine());
 							Console.WriteLine();
+							Console.WriteLine("========== DADOS DA CONTA ==========");
 							foreach (Conta item in Lc)
 							{
 								if (num == item.Numero)
@@ -123,8 +130,9 @@ namespace Banco
 									item.Deposita(valor);
 								}
 							}
+							Console.WriteLine();
 							Console.WriteLine("Deposito realizado com sucesso!");
-							Console.WriteLine("==============================");
+							Console.WriteLine("==================================");
 							Console.ReadKey();
 							break;
 
@@ -132,12 +140,15 @@ namespace Banco
 							Console.Clear();
 							string aux = " ";
 							Console.WriteLine("========== Lista de Contas ==========");
+							Console.WriteLine();
 							foreach (Conta item in Lc)
 							{
 								aux = item.MostrarDados();
 								Console.WriteLine(aux);
+								Console.WriteLine("====================================");
 
 							}
+							Console.WriteLine();
 							Console.WriteLine("====================================");
 							Console.ReadKey();
 							break;
@@ -147,10 +158,15 @@ namespace Banco
 				} while (Op != 9);
 
 			}
-			catch (Exception)
+			catch
 			{
-
-				throw;
+				Console.WriteLine("Erro, entrar em contato comigo");
+				Console.ReadKey();
+			}
+			finally
+			{
+				Console.WriteLine("Obrigdo por utilizar nosso software");
+				Console.ReadKey();
 			}
 
 		}

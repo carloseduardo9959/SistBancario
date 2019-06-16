@@ -15,7 +15,7 @@ namespace Banco
 		public Conta()
 		{
 			titular = new Cliente();
-			saldo = 0;
+			Saldo = 0;
 		}
 
 		public void GravarDados(int num, string nome, string cpf, string endereço, int idade)
@@ -27,8 +27,8 @@ namespace Banco
 		public string MostrarDados()
 		{
 			string aux = " ";
-			aux += "Número: " + numero + Environment.NewLine;
-			aux = "Nome: " + titular.Nome + Environment.NewLine;
+			aux = "Número: " + numero + Environment.NewLine;
+			aux += "Nome: " + titular.Nome + Environment.NewLine;
 			aux += "CPF: " + titular.Cpf + Environment.NewLine;
 			aux += "Endereço: " + titular.Endereço + Environment.NewLine;
 			aux += "Idade: " + titular.Idade;
@@ -37,6 +37,12 @@ namespace Banco
 
 		public int Numero { get => numero; set => numero = value; }
 		public double Saldo { get => saldo; set => saldo = value; }
+
+		public virtual string MostrarSaldo()
+		{
+			string aux = "Saldo disponível.....:  " + saldo.ToString("R$ 0.00");
+			return aux;
+		}
 
 
 		public void Deposita(double valor_deposito)
@@ -47,14 +53,7 @@ namespace Banco
 
 			}
 		}
-		public virtual void Sacar(double valor)
-		{
-
-			if (valor < Saldo)
-			{
-				Saldo = Saldo - valor;
-			}
-		}
+		public virtual void Sacar(double valor)	{}
 
 	}
 
