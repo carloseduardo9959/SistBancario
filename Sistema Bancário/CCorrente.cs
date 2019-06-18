@@ -38,6 +38,7 @@ namespace Banco
 			if (valor > 0 && valor <= Saldo + Limite)
 			{
 				Saldo -= valor + 0.10;
+				Console.WriteLine("Saque realizado com sucesso!!!");
 			}
 			else
 			{

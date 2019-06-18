@@ -108,8 +108,8 @@ namespace Banco
 									item.Sacar(valor);
 								}
 							}
-							Console.WriteLine("Saque realizado com sucesso!");
 							Console.WriteLine("===================================");
+							Console.ReadKey();
 							break;
 
 						case 4:

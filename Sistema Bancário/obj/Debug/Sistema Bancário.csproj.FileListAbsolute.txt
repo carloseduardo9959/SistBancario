@@ -11,3 +11,4 @@ C:\Users\Carlos\Documents\GitHub\SistBancario\Sistema Bancário\bin\Debug\Sistem
 C:\Users\Carlos\Documents\GitHub\SistBancario\Sistema Bancário\obj\Debug\Sistema Bancário.csproj.CoreCompileInputs.cache
 C:\Users\Carlos\Documents\GitHub\SistBancario\Sistema Bancário\obj\Debug\Sistema Bancário.exe
 C:\Users\Carlos\Documents\GitHub\SistBancario\Sistema Bancário\obj\Debug\Sistema Bancário.pdb
+C:\Users\Carlos\Documents\GitHub\SistBancario\Sistema Bancário\obj\Debug\Sistema Bancário.csprojAssemblyReference.cache

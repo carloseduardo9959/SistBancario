@@ -22,6 +22,11 @@ namespace Banco
 			if (valor > 0 && valor <= Saldo)
 			{
 				Saldo -= valor;
+				Console.WriteLine("Saque realizado com sucesso!!!");
+			}
+			else
+			{
+				Console.WriteLine("Saldo indisponível !!!");
 			}
 		}
 
